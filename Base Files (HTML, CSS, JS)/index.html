@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Project</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    <!-- toggle to show the sidebar -->
+    <button id="toggle-btn" class="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h1>Side<span>bar</span></h1>
+            <!-- button to hide the sidebar -->
+            <button id="close-btn" class="close-sidebar-btn">
+                <i class="fas fa-close"></i>
+            </button>
+        </div>
+        <!-- links to html pages -->
+        <ul class="links">
+            <li>
+              <a href="index.html">home</a>
+            </li>
+            <li>
+              <a href="about.html">about</a>
+            </li>
+            <li>
+              <a href="projects.html">projects</a>
+            </li>
+            <li>
+              <a href="contact.html">contact</a>
+            </li>
+          </ul>
+          <!-- social media links-->
+          <ul class="social-icons">
+            <li>
+              <a href="https://www.google.com">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+    </aside>
+    <!-- Javascript link -->
+    <script src="app.js"></script>
+</body>
+</html>

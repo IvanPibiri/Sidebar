@@ -1,0 +1,153 @@
+/* Dosis font imported */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+
+/* initial configuration */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid grey; */
+}
+
+/* variables */
+:root {
+    --bgc-body: #fff;
+    --transition: all 0.2s linear;
+    --bgc-sidebar: #ffb266;
+    --color-text-alt: #FFCC3D;
+    --bgc-body-lighter: #fff2d9;
+    --text-shadow: 2px 2px 2px #FFCC3D;
+    --animation-bounce: bounce 2s ease-in-out infinite;
+}
+
+body {
+    font-size: 1rem;
+    text-transform: initial;
+    background-color: var(--bgc-body);
+    font-family: 'Dosis', sans-serif;
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    color: var(--bgc-sidebar);
+    font-size: 1.7rem;
+    border-radius: 3px;
+    border: transparent;
+    background: transparent;
+    transition: var(--transition);
+}
+
+.sidebar-toggle:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.sidebar {
+    display: flex;
+    background-color: var(--bgc-body-lighter);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+}
+
+.close-sidebar-btn {
+    color: var(--bgc-sidebar);
+    font-size: 1.9rem;
+    border-radius: 3px;
+    border: transparent;
+    background: transparent;
+    transition: var(--transition);
+    padding: 0.7rem 1.5rem;
+}
+
+.close-sidebar-btn:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+h1 {
+    color: black;
+    font-size: 3rem;
+    padding: 0.7rem 1rem;
+}
+
+span {
+    color: var(--color-text-alt);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.links a {
+    color: var(--color-text-alt);
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
+    display: block;
+    padding: 1rem 2rem;
+    transition: var(--transition);
+}
+
+.links a:hover {
+    background: orange;
+    color: var(--bgc-body-lighter);
+}
+
+.social-icons {
+    font-size: 1.3rem;
+    justify-self: center;
+    display: flex;
+    padding-bottom: 2rem;
+}
+
+.social-icons a {
+    margin: 0 0.6rem;
+    color: var(--color-text-alt);
+}
+
+.social-icons a:hover {
+    color: orange;
+}
+
+/* class with attribute transform set to translate(-100%) to hide to the left the sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bgc-body-lighter);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    box-shadow: var(--text-shadow);
+    transition: var(--transition);
+    transform: translate(-100%);
+  }
+
+  /* class with attribute transform set to translate(0) to show the sidebar */
+  .show-sidebar {
+    transform: translate(0);
+  }
+
+  /* if the screen get less than 600px it occupies all screen, otherwise it won't go over 400px */
+  @media screen and (min-width: 600px) {
+    .sidebar {
+        width: 400px;
+    }
+  }
